@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class IO {
 	
@@ -14,13 +14,17 @@ public class IO {
 		//static helper only
 	}
 	
-	public static List<String> getContent(String fileName) {
+	public static List<Integer> getCharacters(String fileName) {
 		try(BufferedReader reader = getReader(fileName)) {
-			List<String> lines = reader.lines().collect(Collectors.toList());
-			if(lines.stream().anyMatch(s -> s.contains("�"))) {
-				throw new IllegalArgumentException("Input file contains non-ASCII charachters!");
+			List<Integer> charList = new ArrayList<>();
+			int i;
+			while((i=reader.read()) != -1) {
+				charList.add(i);
 			}
-			return lines;
+//			if(lines.stream().anyMatch(s -> s.contains("�"))) {
+//				throw new IllegalArgumentException("Input file contains non-ASCII charachters!");
+//			} //TODO: handle non-ASCII characters
+			return charList;
 		} catch (IOException ioe) {
 			throw new RuntimeException(ioe);
 		}
