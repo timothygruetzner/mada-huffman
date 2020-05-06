@@ -1,1 +1,19 @@
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+The open-source Contiki operating system brings IP, the Internet Protocol, to sensor networks through the uIP (micro Internet Protocol), uIPv6 protocol stacks and the SICSlowpan IPv6-over-802.15.4 adaptation layer.
+
+Contiki is an open-source, memory-efficient operating system for sensor network nodes that was the first operating system to provide IP connectivity for sensor networks. Contiki incorporates many recent research results in wireless sensor networks, such as power profiling, cross-layer simulation, and low-power radio networking. The Contiki project was started in 2002 and has subsequently grown to include research institutions and major industry players. At SICS, we use Contiki for several sensor network research projects.
+
+The Contiki operating system is implemented in C and consists of an event-driven kernel, on top of which application programs can be dynamically loaded and unloaded at run time. Contiki processes use lightweight protothreads that provide a linear, thread-like programming style on top of the event-driven kernel. In addition to protothreads, Contiki also supports per-process optional preemptive multi-threading and interprocess communication using message passing. Contiki runs comfortably in a few kilobytes of RAM.
+
+Several of Contiki's mechanisms have been released as separate open-source packages and have seen significant industrial uptake. The uIP embedded IP stack, originally released in 2001, is today used by hundreds of companies in systems such as freighter ships, satellites and oil drilling equipment. Contiki's protothread programming library, first released in 2005, has been used in digital TV decoders and wireless vibration sensors.
+
+For sensor network communication, Contiki provides a low-power radio networking stack called Rime. The Rime stack implements sensor network protocols ranging from reliable data collection and best-effort network flooding to multi-hop bulk data transfer and data dissemination. IP packets are tunnelled over multi-hop routing via the Rime stack.
+
+Interaction with a network of Contiki sensors can be achieved with a Web browser, a text-based shell interface, or dedicated software that stores and displays collected sensor data. The text-based shell interface is inspired by the Unix command shell but provides special commands for sensor network interaction and sensing.
+
+To provide a long sensor network lifetime, it is crucial to control and reduce the power consumption of each sensor node. Contiki provides a software-based power profiling mechanism that keeps track of the energy expenditure of each sensor node. Being software-based, the mechanism allows power profiling at the network scale without any additional hardware. Contiki's power profiling mechanism is used both as a research tool for experimental evaluation of sensor network protocols, and as a way to estimate the lifetime of a network of sensors.
+
+Contiki provides a flash-based file system, called Coffee, for storing data inside the sensor network. The file system allows multiple files to coexist on the same physical on-board flash memory and has a performance that is close to the raw data throughput of the flash chip.
+
+To ease software development and debugging, Contiki provides three simulation environments: the MSPsim emulator, the Cooja cross-layer network simulator, and the Netsim process-level simulator. The development process for software for Contiki typically goes through all three simulation stages before the software runs on the target hardware.
+
+In October 2008, major industry players Cisco and Atmel joined Contiki. Cisco, Atmel and SICS jointly announced uIPv6, the world's smallest fully compliant IPv6 stack. uIPv6 builds on the uIP stack and is integrated in Contiki.

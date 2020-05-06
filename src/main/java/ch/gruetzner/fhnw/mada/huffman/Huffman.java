@@ -74,7 +74,7 @@ public class Huffman {
 		byte[] compressedBytes = new BigInteger(compressedInput.toString(), 2).toByteArray();
 		IO.writeCompressedContent(compressedBytes);
 		System.out.println("Input compressed and written to file.");
-		System.out.println("Shutting down.");
+		System.out.println();
 	}
 	
 	private void walkTree(Node node, Map<Integer, String> lookupTable, StringBuilder compressedValue) {
@@ -97,23 +97,28 @@ public class Huffman {
 		   the Integer class, and pad it with zeros to ensure a length of 8. 
 		 */
 		StringBuilder bytesString = new StringBuilder();
+		boolean firstPass = true;
 		for(byte b : compressedData) {
 			//use string format to ensure length of 8 characters for each byte. replace the used padding (' ') with '0'
 			String byteString = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
 			
 			//sometimes it happens that the entire first bit is empty. we don't what that "padding only"
-			if(byteString.equals("00000000")) {
+			if(firstPass && byteString.equals("00000000")) {
+				firstPass = false;
 				continue;
 			}
 			bytesString.append(byteString);
+			firstPass = false;
 		}
 		
 		//trim away the last 1 and all zeros after 
 		int lastOneIndex = bytesString.lastIndexOf("1");
 		String compressedBitstring = bytesString.substring(0, lastOneIndex).toString();
+		System.out.println("Compressed content read.");
 		
 		//read out the lookup table from file
 		Map<String, Integer> lookupTable = IO.readLookupTable();
+		System.out.println("Lookup table generated.");
 		
 		/*
 		 * as the huffman algorithm is "uniquely decodable" (eindeutig dekodierbar),
@@ -134,6 +139,7 @@ public class Huffman {
 		
 		//save all characters to file
 		IO.writeCharactersToFile(decodedCharacters);
+		System.out.println("Content de-compressed and written to file.");
 		
 	}
 

@@ -12,6 +12,10 @@ public class Main {
 			} else if("decompress".equalsIgnoreCase(command)) {
 				huff.decompress();
 				return;
+			} else if("cycle".equalsIgnoreCase(command)) {
+				huff.compress();
+				huff.decompress();
+				return;
 			}
 		}
 		throw new IllegalArgumentException("No such command.");
