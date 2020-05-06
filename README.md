@@ -11,10 +11,10 @@ Man koennte sich aber auch ueberlegen, die Tabelle geschickter abzuspeichern. An
 ```
 
 ## Running the tool
-Das Programm wird �ber die `Main` Klasse gestartet. Die Steuerung der Funktionalit�t erfolgt anschliessend �ber "Program Arguments".
+Das Programm wird über die `Main` Klasse gestartet. Die Steuerung der Funktionalität erfolgt anschliessend über "Program Arguments".
 
 ### `compress`
-Liest das `input.txt` File, wendet die Huffman Kodierung an und schreibt das Resultat nach `output.dat` f�r den Inhalt und nach `dec_tab.txt` f�r den Huffman Baum.
+Liest das `input.txt` File, wendet die Huffman Kodierung an und schreibt das Resultat nach `output.dat` für den Inhalt und nach `dec_tab.txt` für den Huffman Baum.
 
 Das `input.txt` File muss zu Beginn des Programmes existieren - die anderen werden generiert.
 
@@ -27,7 +27,7 @@ Der dekodierte Text landet im `decompressed.txt` File.
 ### `cycle`
 Führt die beiden oben beschriebenen Schritte nacheinander aus. Somit ist gut ersichtlich, dass `input.txt` und `decompress.txt` identisch herauskommen.
 
-## Testl�ufe
+## Testläufe
 Aus Testzwecken habe ich verschiedene Texte en- und dekodiert und die Platzersparnis beobachtet. Das Resultat ist in untenstehender Tabelle ersichtlich.
 
 | Beschreibung des Files        | Raw-Size | Compressed Size (inkl. Tree)| Ersparnis |
@@ -38,4 +38,4 @@ Aus Testzwecken habe ich verschiedene Texte en- und dekodiert und die Platzerspa
 | Ein Artikel zum IoT-Betriebssystem 'Contiki' (gerade für ein anderes Modul in Verwendung), 550 Wörter, auf Englisch | 3.8KB      |    2.8KB (davon 707 bytes tree) | ca. 26%
 
 ## Bemerkungen
-Das korrekte Verhalten ist lediglich f�r Characters des ASCII Zeichensatzes garantiert.
+Das korrekte Verhalten ist lediglich für Characters des ASCII Zeichensatzes garantiert.
