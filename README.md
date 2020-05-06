@@ -11,7 +11,7 @@ Man koennte sich aber auch ueberlegen, die Tabelle geschickter abzuspeichern. An
 ```
 
 ## Running the tool
-Das Programm wird über die `Main` Klasse gestartet. Die Steuerung der Funktionalität erfolgt anschliessend über "Program Arguments".
+Das Programm wird über die `Main` Klasse gestartet. Die Steuerung der Funktionalit�t erfolgt anschliessend über "Program Arguments".
 
 ### `compress`
 Liest das `input.txt` File, wendet die Huffman Kodierung an und schreibt das Resultat nach `output.dat` für den Inhalt und nach `dec_tab.txt` für den Huffman Baum.
