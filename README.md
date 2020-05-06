@@ -37,5 +37,7 @@ Aus Testzwecken habe ich verschiedene Texte en- und dekodiert und die Platzerspa
 | Eine Ihrer E-Mails an die Klasse mit 121 Wörtern | 901 bytes      |    1'033 bytes (davon 521 bytes tree) | keines (ca. 14% overhead)
 | Ein Artikel zum IoT-Betriebssystem 'Contiki' (gerade für ein anderes Modul in Verwendung), 550 Wörter, auf Englisch | 3.8KB      |    2.8KB (davon 707 bytes tree) | ca. 26%
 
+Somit wird klar, dass sich dieses Verfahren erst für Texte ab einer gewissen Grösse lohnt (wie Sie bereits in Ihrem komprimierten Test-Text geschrieben haben).
+
 ## Bemerkungen
 Das korrekte Verhalten ist lediglich für Characters des ASCII Zeichensatzes garantiert.
