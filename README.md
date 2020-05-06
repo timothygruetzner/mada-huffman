@@ -1,5 +1,5 @@
 # mada-huffman
-#### Bearbeitet von Timothy Gr�tzner
+#### Bearbeitet von Timothy Grützner
 
 ### Ihr Content
 Der Klartext Ihrer mitgelieferten kodierten Datei enkodiert mit Ihrem Huffman Baum lautet:
