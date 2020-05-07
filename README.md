@@ -10,6 +10,9 @@ Das Verfahren lohnt sich in der vorgestellten Form nur fuer Texte mit einer gewi
 Man koennte sich aber auch ueberlegen, die Tabelle geschickter abzuspeichern. Ansonsten: Gut gemacht!
 ```
 
+### Tipp
+Wenn Sie das Programm im `decompress` Modus starten, werden initial Ihre Files verwendet bzw. der oben stehende Output generiert.
+
 ## Running the tool
 Das Programm wird über die `Main` Klasse gestartet. Die Steuerung der Funktionalität erfolgt anschliessend über "Program Arguments".
 
