@@ -3,4 +3,29 @@
   <groupId>ch.gruetzner.fhnw</groupId>
   <artifactId>mada-huffman</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  <properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+  <build>
+    <finalName>huff</finalName>
+    <plugins>
+      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+				  <archive>
+				    <manifest>
+					    <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+					    <mainClass>ch.gruetzner.fhnw.mada.huffman.Main</mainClass>
+				    </manifest>
+				  </archive>
+				</configuration>
+			</plugin>
+    </plugins>
+  </build>
+
 </project>
